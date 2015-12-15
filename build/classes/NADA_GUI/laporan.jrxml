@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3ad56f1e-02a9-48f2-824b-92c1096d8732">
+	<property name="ireport.zoom" value="1.1000000000000008"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Times New Roman" fontSize="50" isBold="true" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#736343" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<style name="Row" mode="Transparent">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style backcolor="#E6DAC3"/>
+		</conditionalStyle>
+	</style>
+	<queryString>
+		<![CDATA[SELECT
+     sewa.`no_sewa` AS sewa_no_sewa,
+     sewa.`id_member` AS sewa_id_member,
+     sewa.`ruang_studio` AS sewa_ruang_studio,
+     sewa.`harga_sewa` AS sewa_harga_sewa,
+     sewa.`tanggal` AS sewa_tanggal,
+     sewa.`nama_penyewa` AS sewa_nama_penyewa,
+     sewa.`paket_sewa` AS sewa_paket_sewa
+FROM
+     `sewa` sewa]]>
+	</queryString>
+	<field name="sewa_no_sewa" class="java.lang.String"/>
+	<field name="sewa_id_member" class="java.lang.String"/>
+	<field name="sewa_ruang_studio" class="java.lang.String"/>
+	<field name="sewa_harga_sewa" class="java.lang.Integer"/>
+	<field name="sewa_tanggal" class="java.sql.Date"/>
+	<field name="sewa_nama_penyewa" class="java.lang.String"/>
+	<field name="sewa_paket_sewa" class="java.lang.String"/>
+	<variable name="sewa_harga_sewa_1" class="java.lang.Integer" resetType="Column" calculation="Sum">
+		<variableExpression><![CDATA[$F{sewa_harga_sewa}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="136" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="170" y="0" width="263" height="62" uuid="0ccb9dcc-ec2f-44df-acf1-dc721cb3f81c"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Bauhaus 93" size="26" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[NADA Music Studio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="199" y="62" width="166" height="20" uuid="a2b86f61-09fc-4499-b843-133b2049416c"/>
+				<text><![CDATA[Jl. Desa Cipadung No.68a Bandung]]></text>
+			</staticText>
+			<image>
+				<reportElement x="31" y="14" width="106" height="100" uuid="0a021158-e5c6-4d33-85d6-417ea56e5f58"/>
+				<imageExpression><![CDATA["C:\\Users\\Nurshabah\\Documents\\NetBeansProjects\\Pengolahan Rental Studio Music\\src\\Images\\Milk-Music-Logo-RGB about.png"]]></imageExpression>
+			</image>
+			<line>
+				<reportElement x="4" y="125" width="551" height="1" uuid="ba7459ef-9153-4f2a-898c-9736b7cd3628"/>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="2c12ab6c-c13e-4dac-a0de-989749c6fef3"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="0" width="75" height="15" forecolor="#736343" uuid="72916120-5f32-46dc-9f88-da32a3c55f84"/>
+				<text><![CDATA[Kode Sewa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="75" y="0" width="72" height="15" forecolor="#736343" uuid="9b602be4-0ac1-4511-b60c-917a82f7e852"/>
+				<text><![CDATA[ID Member]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="236" y="0" width="97" height="15" forecolor="#736343" uuid="1220d277-0ff9-403a-8510-84193a46bc30"/>
+				<text><![CDATA[Ruang Studio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="333" y="0" width="111" height="15" forecolor="#736343" uuid="1117d603-4b22-4310-b1e6-3cec64c01c2d"/>
+				<text><![CDATA[Tanggal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="444" y="0" width="111" height="15" forecolor="#736343" uuid="533848e6-9eea-4216-ba63-404796f3789e"/>
+				<text><![CDATA[Harga Sewa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="147" y="1" width="89" height="15" forecolor="#736343" uuid="143ead9c-9838-409e-8990-8620f5ed1e1c"/>
+				<text><![CDATA[Nama Member]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<frame>
+				<reportElement style="Row" mode="Opaque" x="0" y="0" width="555" height="15" uuid="4a11d93a-2026-4d4a-961a-aa6249776671"/>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="0" y="0" width="75" height="15" uuid="2ad74398-4430-48f5-bfd7-329bcd39a15b"/>
+					<textFieldExpression><![CDATA[$F{sewa_no_sewa}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="75" y="0" width="72" height="15" uuid="313e01a0-45e3-48f0-9e84-ff1a31a4e3db"/>
+					<textFieldExpression><![CDATA[$F{sewa_id_member}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="236" y="0" width="97" height="15" uuid="db2c1870-fb65-4d9c-9560-9a37dc740795"/>
+					<textFieldExpression><![CDATA[$F{sewa_ruang_studio}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="dd-MMM-yyyy">
+					<reportElement style="Detail" x="333" y="0" width="111" height="15" uuid="7a316e0d-06da-4471-a934-4b0e73eda183"/>
+					<textFieldExpression><![CDATA[$F{sewa_tanggal}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="444" y="0" width="111" height="15" uuid="a4fbeccd-7cc3-46b5-9e2c-35a5070bee49"/>
+					<textFieldExpression><![CDATA[$F{sewa_harga_sewa}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="147" y="0" width="89" height="15" uuid="ca26fd44-10d5-4827-ae3d-26a440056896"/>
+					<textFieldExpression><![CDATA[$F{sewa_nama_penyewa}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="64" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="ee0e4c27-798f-4fb1-8dc8-b0b50485abcb"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement x="444" y="4" width="100" height="20" uuid="5804ba64-4a31-4b79-8337-3fe64fba373d"/>
+				<textElement>
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{sewa_harga_sewa_1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" x="382" y="4" width="50" height="15" forecolor="#736343" uuid="b92724b8-7013-4526-a7f5-a67a12abfe5b"/>
+				<text><![CDATA[Jumlah]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="-21" y="1" width="597" height="24" forecolor="#D0B48E" backcolor="#F2EBDF" uuid="082578f6-586b-43ed-bb87-54d5d0c7ba81"/>
+				<textField evaluationTime="Report">
+					<reportElement style="Column header" x="533" y="0" width="40" height="20" forecolor="#736343" uuid="af21e966-3c27-4ebf-8796-697707344c90"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Column header" x="453" y="0" width="80" height="20" forecolor="#736343" uuid="324c872e-7b45-43d1-98be-fe9f2aa3b3d1"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement style="Column header" x="22" y="1" width="197" height="20" forecolor="#736343" uuid="de73c50e-1f0b-4856-b0a1-cbb517c0e7d0"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
