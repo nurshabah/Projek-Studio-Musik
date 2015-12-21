@@ -9,7 +9,7 @@
             <Property name="text" type="java.lang.String" value="Bantuan"/>
           </Properties>
           <SubComponents>
-            <MenuItem class="javax.swing.JCheckBoxMenuItem" name="Bantuan">
+            <MenuItem class="javax.swing.JMenuItem" name="Bantuan">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Bantuan"/>
               </Properties>

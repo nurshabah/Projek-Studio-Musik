@@ -48,7 +48,7 @@ public class AboutProgram extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Tentang Progam");
 
-        jLabel2.setText("Version 0.0.1b");
+        jLabel2.setText("Version 0.0.2b");
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Milk-Music-Logo-RGB about.png"))); // NOI18N
 

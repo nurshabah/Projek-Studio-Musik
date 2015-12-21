@@ -67,7 +67,7 @@ public class Login extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu4 = new javax.swing.JMenu();
-        Bantuan = new javax.swing.JCheckBoxMenuItem();
+        About = new javax.swing.JMenuItem();
         AboutProgramMenu = new javax.swing.JMenuItem();
 
         jMenu2.setText("jMenu2");
@@ -124,13 +124,13 @@ public class Login extends javax.swing.JFrame {
         jMenu4.setText("Bantuan");
         jMenu4.setToolTipText("");
 
-        Bantuan.setText("Bantuan");
-        Bantuan.addActionListener(new java.awt.event.ActionListener() {
+        About.setText("Bantuan");
+        About.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BantuanActionPerformed(evt);
+                AboutActionPerformed(evt);
             }
         });
-        jMenu4.add(Bantuan);
+        jMenu4.add(About);
 
         AboutProgramMenu.setText("Tentang Aplikasi");
         AboutProgramMenu.addActionListener(new java.awt.event.ActionListener() {
@@ -225,9 +225,9 @@ public class Login extends javax.swing.JFrame {
      new AboutProgram().setVisible(true);
     }//GEN-LAST:event_AboutProgramMenuActionPerformed
 
-    private void BantuanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BantuanActionPerformed
+    private void AboutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AboutActionPerformed
         new help().setVisible(true);
-    }//GEN-LAST:event_BantuanActionPerformed
+    }//GEN-LAST:event_AboutActionPerformed
 class User
         {
             Statement stat;
@@ -336,8 +336,8 @@ class User
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem About;
     private javax.swing.JMenuItem AboutProgramMenu;
-    private javax.swing.JCheckBoxMenuItem Bantuan;
     private javax.swing.JTextField ID;
     private javax.swing.JButton btnmasuk;
     private javax.swing.JComboBox cmbpilih;

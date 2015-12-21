@@ -100,7 +100,7 @@ public class MenuPemilik extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu4 = new javax.swing.JMenu();
-        Bantuan = new javax.swing.JCheckBoxMenuItem();
+        Bantuan = new javax.swing.JMenuItem();
         AboutProgramMenu = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -274,7 +274,7 @@ public class MenuPemilik extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem AboutProgramMenu;
-    private javax.swing.JCheckBoxMenuItem Bantuan;
+    private javax.swing.JMenuItem Bantuan;
     private javax.swing.JButton cetak;
     private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
